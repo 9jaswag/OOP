@@ -4,6 +4,7 @@ const assert = require('chai').assert;
 const BankAccount = require('../oop.js').BankAccount;
 const KiddiesAccount = require('../oop.js').KiddiesAccount;
 
+
 describe('Object Oriented Programming', ()=>{
 
     describe('Create an instance of a class', () => {
@@ -39,4 +40,11 @@ describe('Object Oriented Programming', ()=>{
 			assert.equal(chuks.getBalance(), 'chuks your account balance is 5000');
         });
     });
+
+    describe('Check for implementation of inheritance', () => {
+        it('instance should have a balance of 0', () => {
+            let chuks = new KiddiesAccount('chuks');
+            assert.equal(chuks.getBalance(), "chuks your account balance is 0");
+        });
+    })
 })
