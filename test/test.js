@@ -1,6 +1,8 @@
 "use strict";
 const assert = require('chai').assert;
-const myApp = require('../oop.js');
+// const myApp = require('../oop.js');
+const BankAccount = require('../oop.js').BankAccount;
+const KiddiesAccount = require('../oop.js').KiddiesAccount;
 
 describe('Object Oriented Programming', ()=>{
 
@@ -28,13 +30,13 @@ describe('Object Oriented Programming', ()=>{
         });
         it('Should return balance when withdrawal is made', () => {
             let chuks = new BankAccount('chuks');
-            chuks.deposit(5000)
+            chuks.deposit(50000);
 			assert.equal(chuks.withdraw(6000), 44000);
         });
         it('Should return balance when getBalance is invoked', () => {
             let chuks = new BankAccount('chuks');
             chuks.deposit(5000)
-			assert.equal(chuks.getBalance(), 5000);
+			assert.equal(chuks.getBalance(), 'chuks your account balance is 5000');
         });
     });
 })

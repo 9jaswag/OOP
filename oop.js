@@ -61,3 +61,8 @@ class KiddiesAccount extends BankAccount {
         this.name = name;
     }
 }
+
+module.exports = {
+    BankAccount: BankAccount,
+    KiddiesAccount: KiddiesAccount
+}
