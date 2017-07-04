@@ -54,7 +54,8 @@ class BankAccount {
  */
 
 class KiddiesAccount extends BankAccount {
-    constructor () {
+    constructor (name) {
         super();
+        this.name = name;
     }
 }
