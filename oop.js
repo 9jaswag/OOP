@@ -20,6 +20,7 @@ class BankAccount {
 
     deposit(amount) {
         this.balance += amount;
+        return this.balance;
     }
 
     /**
@@ -33,6 +34,7 @@ class BankAccount {
             return "Insufficient Funds";
         }else {
             this.balance -= amount;
+            return this.balance;
         }
     }
 
