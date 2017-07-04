@@ -1,80 +1,54 @@
 "use strict";
 
 /**
- * Shopping Cart class
+ * Bank Account class
+ * 
+ * @param {string} name name of the bank account holder
+ * @param {number} balance bank account balance
  */
-
-class ShoppingCart {
-    constructor () {
-        this.total = 0;
-        this.item = {};
+class BankAccount {
+    constructor(name) {
+        this.name = name;
+        this.balance = 0;
     }
 
     /**
-     * Add an item to the shopping cart
+     * Deposit an amount into the account
      * 
-     * @param {string} itemName the name of the item to be added
-     * @param {number} quantity the quantity of the item to be added
-     * @param {number} price the price of the item to be added
+     * @param {number} amount the amount to be deposited
      */
 
-    addItem (itemName, quantity, price){
-        let itemTotal = quantity * price;
-        this.total += itemTotal;
-        this.items[itemName] = quantity;
+    deposit(amount) {
+        this.balance += amount;
     }
 
     /**
-     * Remove an item from the shopping cart
+     * Withdraw an amount from the account
      * 
-     * @param {string} itemName the name of the item to be removed
-     * @param {number} quantity the quantity of the item to be removed
-     * @param {number} price the price of the item to be removed
+     * @param {number} amount the amount to be withdrawn
      */
 
-    removeItem (itemName, quantity, price){
-        if(quantity > this.items.itemName){
-            delete this.items[itemName];
-        }else{
-            this.items[itemName] = this.items[itemName] - quantity;
-        }
-        let itemTotal = quantity * price;
-        this.total -= itemTotal;
-    }
-
-    /**
-     * Accept payment and checkout
-     * 
-     * @param {number} cashPaid the amount paid at checkout.
-     */
-
-    checkout(cashPaid){
-        let balance;
-        if(cashPaid < this.total){
-            return "Cash paid not sufficient";
+    withdraw(amount) {
+        if (amount > this.balance) {
+            return "Insufficient Funds";
         }else {
-            balance = cashPaid - this.total;
-            return balance
+            this.balance -= amount;
         }
     }
+
+    /**
+     * get account balance
+     * 
+     */
+
+    getBalance() {
+        return `${this.name} your account balance is ${this.balance}`;
+    }
+
+    
 }
+
 
 /**
- * Shop class
+ * Kids Bank Account sub-class that extends bank account class
  */
-
-class Shop {
-    constructor() {
-        super();
-        this.quantity = 100;
-    }
-
-    /**
-     * Reduce item quantity in shop class by 1 when method is called
-     * 
-     */
-
-    removeItem (){
-        this.quantity -= 1;
-    }
-}

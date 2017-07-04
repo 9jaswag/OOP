@@ -4,7 +4,7 @@
   "description": "An OOP implementation that models a Shopping cart and takes advantage of encapsulation, inheritance, polymorphism and abstraction. An Andela LOS24 Bootcamp day 2 output",
   "main": "oop.js",
   "scripts": {
-    "test": "test/test.js"
+    "test": "mocha test/test.js"
   },
   "repository": {
     "type": "git",
