@@ -52,3 +52,9 @@ class BankAccount {
 /**
  * Kids Bank Account sub-class that extends bank account class
  */
+
+class KiddiesAccount extends BankAccount {
+    constructor () {
+        super();
+    }
+}
