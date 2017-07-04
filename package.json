@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "An OOP implementation that models a Shopping cart and takes advantage of encapsulation, inheritance, polymorphism and abstraction. An Andela LOS24 Bootcamp day 2 output",
   "main": "oop.js",
+  "directories": {
+    "test": "tests"
+  },
   "scripts": {
     "test": "mocha --compilers js:babel-register",
     "build": "babel-node oop.js"
